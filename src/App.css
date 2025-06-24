@@ -4,9 +4,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-height: 100vh;
 	background-color: #fce4ec; /* Um rosinha claro */
-	overflow: hidden; /* Para esconder corações fora da tela inicialmente */
 }
 
 .container {
