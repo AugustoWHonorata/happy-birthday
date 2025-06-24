@@ -8,7 +8,7 @@ body {
 	height: 100vh;
 	box-sizing: border-box;
 }
-. .container {
+.container {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
