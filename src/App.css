@@ -5,6 +5,7 @@ body {
 	justify-content: center;
 	align-items: center;
 	background-color: #fce4ec; /* Um rosinha claro */
+	height: 100vh;
 }
 
 .container {
