@@ -1,0 +1,162 @@
+body {
+	margin: 0;
+	font-family: "Arial", sans-serif;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background-color: #fce4ec; /* Um rosinha claro */
+	overflow: hidden; /* Para esconder corações fora da tela inicialmente */
+}
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 20px;
+	position: relative;
+}
+
+h1 {
+	color: #e91e63; /* Cor de rosa mais vibrante */
+	font-size: 3em;
+	margin-bottom: 30px;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.main-gif {
+	max-width: 90%;
+	height: auto;
+	border-radius: 15px;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.click-button {
+	margin-top: 40px;
+	padding: 15px 30px;
+	font-size: 1.5em;
+	background-color: #ff4081; /* Um rosa avermelhado */
+	color: white;
+	border: none;
+	border-radius: 50px;
+	cursor: pointer;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+	transition: all 0.3s ease;
+}
+
+.click-button:hover {
+	background-color: #e91e63;
+	transform: translateY(-3px);
+}
+
+/* Animação de corações */
+.heart {
+	position: fixed;
+	top: -10px; /* Começa acima da tela */
+	animation: fall linear forwards;
+	pointer-events: none; /* Garante que não interfira com cliques */
+	z-index: 10;
+}
+
+@keyframes fall {
+	to {
+		transform: translateY(100vh) rotate(360deg);
+		opacity: 0;
+	}
+}
+
+/* Modal */
+.modal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 100;
+}
+
+.modal-content {
+	background-color: white;
+	padding: 40px;
+	border-radius: 15px;
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+	text-align: center;
+	max-width: 500px;
+	width: 90%;
+	position: relative;
+	animation: fadeInScale 0.5s ease-out forwards;
+}
+
+@keyframes fadeInScale {
+	from {
+		opacity: 0;
+		transform: scale(0.9);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.modal-content p {
+	font-size: 1.6em;
+	color: #4a4a4a;
+	margin-bottom: 30px;
+	line-height: 1.5;
+}
+
+.modal-buttons button {
+	padding: 12px 25px;
+	margin: 0 15px;
+	font-size: 1.2em;
+	border: none;
+	border-radius: 30px;
+	cursor: pointer;
+	transition: all 0.3s ease;
+	font-weight: bold;
+}
+
+.modal-buttons button:first-child {
+	background-color: #4caf50; /* Verde para 'Sim' */
+	color: white;
+}
+
+.modal-buttons button:first-child:hover {
+	background-color: #45a049;
+	transform: translateY(-2px);
+}
+
+.modal-buttons button:last-child {
+	background-color: #f44336; /* Vermelho para 'Não' */
+	color: white;
+}
+
+.modal-buttons button:last-child:hover {
+	background-color: #da190b;
+	transform: translateY(-2px);
+}
+
+.final-message {
+	margin-top: 30px;
+	font-size: 2em;
+	color: #e91e63;
+	font-weight: bold;
+	animation: popIn 0.5s ease-out forwards;
+}
+
+@keyframes popIn {
+	from {
+		opacity: 0;
+		transform: scale(0.5);
+	}
+	to {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
