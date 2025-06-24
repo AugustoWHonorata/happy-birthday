@@ -6,6 +6,7 @@ body {
 	align-items: center;
 	background-color: #fce4ec; /* Um rosinha claro */
 	height: 100vh;
+	box-sizing: border-box;
 }
 
 .container {
@@ -14,7 +15,6 @@ body {
 	align-items: center;
 	justify-content: center;
 	text-align: center;
-	padding: 20px;
 	position: relative;
 }
 
